@@ -10,7 +10,7 @@ const apps = [
         folder:"games"
     },
     {
-        name:"Bank expenses app",
+        name:"Bank expenses",
         link:"https://jasonrlh95.github.io/bankApp/",
         folder:"sites"
     },
