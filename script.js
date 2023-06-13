@@ -33,10 +33,11 @@ let div,folder,header,appDiv,app,appName;
 const deployApps=()=>{
     let undo = document.getElementById('undo');
     let circle = document.getElementById('circle');
+    // let square = document.getElementById('square');
     for(let i=0;i<2;i++){
         undo.addEventListener('click',()=>{closeFolder(folders,header)})
         circle.addEventListener('click',()=>{closeFolder(folders,header)})
-        // circle.addEventListener('dblclick',()=>{closeFolder(folders,header)})
+        // square.addEventListener('dblclick',()=>{closeFolder(folders,header)})
         div = document.createElement('div');
         folder = document.createElement('div');
         header = document.createElement('h6');
@@ -56,7 +57,6 @@ const deployApps=()=>{
         div.appendChild(folder);
         div.appendChild(header);
         screen.appendChild(div);
-        // console.log(folders)
     }
     for(let j =0;j<apps.length;j++){
         if(apps[j].folder==='sites'){
@@ -96,7 +96,6 @@ const deployApps=()=>{
             folders[1].appendChild(appDiv);
         }
     }
-    // console.log(app_names1)
 }
 const openFolder=(x,y,inx)=>{
     x.style.width = '300px';
@@ -153,7 +152,6 @@ const openFolder=(x,y,inx)=>{
         app_names2[1].style.fontSize = '16px';
     }
     y.style.filter = "opacity(0)";
-    // screen.style.filter = "opacity(50%)";
 
 }
 const closeFolder=(x,y)=>{
@@ -222,6 +220,5 @@ const closeFolder=(x,y)=>{
         }
     }
     y.style.filter = 'opacity(100%)';
-    // screen.style.filter = 'opacity(100%)';
 }
 window.onload = deployApps();
